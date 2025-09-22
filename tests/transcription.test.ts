@@ -13,9 +13,8 @@ describe('Transcription API (no MongoDB)', () => {
             jest.spyOn(transcriptionService, 'createTranscription').mockResolvedValue({
                 _id: 'mock-id',
                 audioUrl: fakeAudioUrl,
-                transcription: 'transcribed text.',
-                createdAt: new Date(),
-            });
+                transcription: 'transcribed text.'
+            } as any);
 
             const res = await request(app)
                 .post('/api/transcription')

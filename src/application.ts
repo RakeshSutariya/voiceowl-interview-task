@@ -2,7 +2,6 @@ import express, { Request, Response, NextFunction } from "express";
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import cors from 'cors';
-// import { startDatabase } from './db_connection';
 import { expressMiddleware, expressRateLimitMiddleware } from './middlewares';
 import { transcriptionRoutes } from "./routes";
 
@@ -47,8 +46,6 @@ if (process.env.NODE_ENV === 'production') {
 } else {
     app.use(morgan('dev'));
 }
-
-// startDatabase()
 
 app.use("/api", transcriptionRoutes);
 

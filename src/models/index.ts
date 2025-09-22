@@ -1,1 +1,1 @@
-// export { TranscriptionModel } from './transcription.model';
+export { TranscriptionModel } from './transcription.model';

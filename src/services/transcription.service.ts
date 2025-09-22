@@ -1,5 +1,5 @@
 import axios from "axios";
-// import { TranscriptionModel } from "../models";
+import { TranscriptionModel } from "../models";
 
 async function retry<T>(fn: () => Promise<T>, retries: number = 3, delay: number = 1000): Promise<T> {
     let lastError: any;
@@ -25,17 +25,17 @@ export const createTranscription = async (audioUrl: string) => {
     });
 
     const transcription = "transcribed text.";
-    // const record = await TranscriptionModel.create({
-    //   audioUrl,
-    //   transcription
-    // });
-    // Mock saving to DB (just return a fake record)
-    const record = {
-      _id: Date.now().toString(), // unique mock ID
+    const record = await TranscriptionModel.create({
       audioUrl,
-      transcription,
-      createdAt: new Date(),
-    };
+      transcription
+    });
+    // Mock saving to DB (just return a fake record)
+    // const record = {
+    //   _id: Date.now().toString(), // unique mock ID
+    //   audioUrl,
+    //   transcription,
+    //   createdAt: new Date(),
+    // };
     if(record){
         return record;
     }else{
