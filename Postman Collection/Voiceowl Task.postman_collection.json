@@ -21,11 +21,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}api/transcription",
+					"raw": "{{URL}}/api/transcription",
 					"host": [
-						"{{URL}}api"
+						"{{URL}}"
 					],
 					"path": [
+						"api",
 						"transcription"
 					]
 				}

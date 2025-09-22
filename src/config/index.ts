@@ -7,7 +7,7 @@ export const config = {
     host: process.env.NODE_HOST || "127.0.0.1"
   },
   expressRateLimit: {
-    windowMs: 1 * 60 * 1000, // 15 minutes
+    windowMs: 1 * 60 * 1000, // 10 minutes
     limit: 100 // Limit each IP to 100 requests per `window` (here, per 15 minutes).
   },
   database: {
