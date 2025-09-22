@@ -1,0 +1,1 @@
+export * as TranscriptionService from './transcription.service';

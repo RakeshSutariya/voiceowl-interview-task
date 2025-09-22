@@ -1,0 +1,10 @@
+NODE_HOST=127.0.0.1
+SERVER_PORT=8083
+NODE_ENV=development
+# localhost, development, production, staging
+
+DB_HOST=127.0.0.1
+DB_PORT=27017
+DB_USER_NAME=voiceowl
+DB_PASSWORD=voiceowl12345
+DB_NAME=voiceowl

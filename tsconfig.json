@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2020",                     /* Output modern JS (Node 14+). */
+    "module": "commonjs",                   /* Node uses CommonJS. */
+    "lib": ["ES2020"],                      /* Include modern JS libs. */
+
+    /* Emit */
+    "outDir": "dist",                       /* Compiled JS output folder. */
+    "rootDir": "src",                       /* Source TypeScript folder. */
+    "esModuleInterop": true,                /* Allow default imports from CJS modules. */
+    "resolveJsonModule": true,              /* Import JSON files. */
+
+    /* Strictness */
+    "strict": true,                         /* Enable all strict type-checking options. */
+    "noImplicitAny": true,                  /* Flag implicit any. */
+    "strictNullChecks": true,               /* Null safety. */
+
+    /* Node compatibility */
+    "types": ["node", "jest"],                      /* Include Node.js typings. */
+
+    /* Debugging */
+    "sourceMap": true                       /* Generate .map files for debugging. */
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
